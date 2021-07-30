@@ -1,0 +1,378 @@
+* {
+	vertical-align: baseline;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-image: url(assets/img/bg122.png);
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+
+header {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+/*.menu{
+  width: 100%;
+  height: 20vh;
+	
+	
+}*/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 145px;
+  max-width: 1440px;
+  padding: 0 80px;
+  position: relative;
+}
+
+.app-content{
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img, .category-img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  border-radius: 10px 10px 0 0;
+  height: 200px;
+} 
+
+.cards-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px;
+  margin-top: 30px;
+}
+
+.card, .category {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 4 - 30px);
+  margin-bottom: 40px;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+  perspective: 1000;
+}
+
+.card:hover, .category:hover{
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-title, .category-title{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #48266C;
+  /*color: #055fa6;*/
+  /*color: #3c2e4b;*/
+  margin-top: 19px;
+  padding: 0 24px;
+}
+
+.app-title{
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
+  color: #3c2e4b;
+  padding: 0 80px;
+}
+
+/*menu*/
+.ham {
+    position: absolute;
+    z-index: 10;
+    top: 53px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    
+    background-size: 100%;
+  }
+
+.navbar {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #48266C;
+  width: 25%;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.showNav {
+  transform: translateY(0);
+}
+
+
+
+.navbar ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuLink{
+  color: #fff;
+  font-size: 34px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar ul li {
+  padding: 15px 0;
+}
+
+.navbar ul li {
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+.active{
+  color: #ff9600;
+ }
+
+.navbar ul li:hover, .navbar ul li:focus {
+  color: rgb(255, 136, 0);
+}
+/* button menu */
+.line1, .line2, .line3 {
+  width: 35px;
+  height: 5px;
+  background-color:#C4ACDE;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 15px;
+}
+
+.change .line1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .line2 {
+  opacity: 0;
+}
+
+.change .line3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.category-name{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.btn-rotate{
+  width: 20px;
+  height: 20px;
+  margin: 20px 15px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* switcher */
+.switch{
+  /*margin: 200px auto;*/
+  width: max-content;
+  padding: 32px;
+  text-align: center
+}
+.switcher{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.1),-1px -1px 1px rgba(0,0,0,.1);
+  width: 115px;
+  height: 36px;
+  position: relative;
+  border-radius: 18px;
+  background-color: #C4ACDE;
+}
+.switcher button{
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f6f0fc;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.1),-1px -1px 1px rgba(0,0,0,.1)
+}
+.active_btn{
+  background-color: #a1d5fe;
+  transition: .4s ease-in-out
+}
+.active_btn button{
+  background-color: #dcf1ff;
+  left: auto;
+  right: 4px;
+  transition: .6s ease-in-out
+}
+.switcher span{
+  color: #fff;
+  font-weight: 600;
+}
+
+.rotate{
+  transform: rotateY(180deg);
+}
+.reverse{
+  transform: rotateY(360deg);
+}
+
+.category {
+  transition: 0.3s;
+  transform-style: preserve-3d;
+  position: relative;
+  perspective: 1000;
+ }
+  
+ .front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+ }
+  
+ .front {
+  z-index: 2;
+ }
+  
+ .back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+.back{
+  font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: #ff9600;
+}
+ 
+.play-regime{
+  height: 100%;
+  border-radius: 10px;
+}
+
+.none{
+  display: none;
+}
+
+.btn-start-game{
+  display: none;
+  width: 300px;
+  height: 50px;
+  background: #33a5fd;
+  margin: 0 auto;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  font-size: 28px;
+  padding: 10px 10px 0 10px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.btn-start-game:hover{
+  background: #ff9600;
+}
+
+.btn-repeat{
+  color: #33a5fd;
+  background: transparent;
+  border: 3px solid  #33a5fd;
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 28px;
+  padding: 10px 10px 0 10px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.btn-none{
+  display: none;
+}
+
+.star{
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}
+
+.score{
+  display: flex;
+}
+
+.finish-game{
+  background: url(assets/img/game-over.png);
+  width: 750px;
+  height: 420px;
+  margin: 0 auto;
+}
+
+  @media only screen and (max-width: 600px) {
+    .card, .category{width: calc(100% / 1 - 30px);} 
+    .cards-content{padding: 30px 40px 0 40px;justify-content: center;} 
+  }
+
+  @media only screen and (max-width: 1100px) and (min-width: 600px){
+    .card, .category{width: calc(100% / 2 - 30px);}
+  }
+
+  @media only screen and (max-width: 1300px) and (min-width: 1100px){
+    .card, .category{width: calc(100% / 3 - 30px);}
+  }
+
+  @media (max-width: 1100px){
+    .navbar {width: 100%;}
+}
+
+  
